@@ -17,6 +17,8 @@ class CreateDepartamentoTable extends Migration
             $table->char('nombre', 30)->nullable();
             $table->bigInteger('id_departamento', true)->nullable();
             $table->char('codigo', 2)->nullable();
+            $table->bigInteger('id')->nullable();
+            $table->timestampTz('timestamps')->nullable();
         });
     }
 
