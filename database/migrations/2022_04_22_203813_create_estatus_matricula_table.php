@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDepartamentoTable extends Migration
+class CreateEstatusMatriculaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateDepartamentoTable extends Migration
      */
     public function up()
     {
-        Schema::create('departamento', function (Blueprint $table) {
-            $table->id_departamento();
-            $table->string('codigo',2);
-            $table->string('nombre',30);
+        Schema::create('estatus_matricula', function (Blueprint $table) {
+            $table->bigInteger('id_estatus', true);
+            $table->char('codigo', 2)->primary();
+            $table->char('nombre', 15)->nullable();
         });
     }
 
@@ -27,6 +27,6 @@ class CreateDepartamentoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('departamento');
+        Schema::dropIfExists('estatus_matricula');
     }
 }

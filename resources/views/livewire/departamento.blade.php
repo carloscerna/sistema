@@ -19,17 +19,16 @@
                 </div>
             </div>
         </div>
-        <label class="flex justify-center">Seleccionado: <strong>{{ $Seleccionado }}</strong></label>
+        <label class="flex justify-center">Seleccionado: <strong>{{ $seleccionado }}</strong></label>
     </div>
 
     <script>
         $(document).ready(function(){
             $('#select2').select2();
-            $('#select2').on('change', function(e)){
+            $('#select2').on('change', function(e){
                 let valor = $('#select2').select2('val');
                 let text = $('#select2 option:selected').text();
-                @this.set('seleccionado', texto);
-            }
-                
+                @this.set('seleccionado', text);
+            })
         })
     </script>
