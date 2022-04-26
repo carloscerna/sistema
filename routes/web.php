@@ -31,4 +31,5 @@ use Illuminate\Support\Facades\Route;
 
     Route::get('/Departamento', Departamento::class)->name('Departamento');
     Route::get('/CatalogoNacionalidad', CatalogoNacionalidad::class)->name('CatalogoNacionalidad');
+    //Route::resources('dash/')
  }); 

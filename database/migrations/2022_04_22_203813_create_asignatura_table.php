@@ -31,6 +31,8 @@ class CreateAsignaturaTable extends Migration
             $table->char('descripcion', 35)->nullable();
             $table->char('codigo_servicio_educativo', 2)->nullable();
             $table->boolean('estatus')->nullable()->default(true);
+            $table->bigInteger('id')->nullable();
+            $table->timestampTz('timestamps')->nullable();
         });
     }
 
