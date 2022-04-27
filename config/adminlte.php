@@ -255,9 +255,8 @@ return [
         ],
         ['header' => 'Mantenimiento Catalógos'],
         [
-            'text' => 'Departamento',
-            //'url'  => '/departamento',
-            //'route' => 'livewire.departamento',
+            'text' => 'Asignatura',
+            'route' => 'mantenimiento.asignatura.index',
             'icon' => 'fas fa-fw fa-user',
         ],
         [

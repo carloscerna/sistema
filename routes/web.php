@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\mantenimiento\AsignaturaController;
 use App\Http\Livewire\CatalogoNacionalidad;
 use App\Http\Livewire\Departamento;
 
@@ -31,5 +32,7 @@ use Illuminate\Support\Facades\Route;
 
     Route::get('/Departamento', Departamento::class)->name('Departamento');
     Route::get('/CatalogoNacionalidad', CatalogoNacionalidad::class)->name('CatalogoNacionalidad');
-    //Route::resources('dash/')
+    // Mantenimientos
+        // ASIGANTURA
+         Route::resource('/mantenimiento/Asignatura', AsignaturaController::class)->names('mantenimiento.asignatura');
  }); 
