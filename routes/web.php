@@ -34,5 +34,5 @@ use Illuminate\Support\Facades\Route;
     Route::get('/CatalogoNacionalidad', CatalogoNacionalidad::class)->name('CatalogoNacionalidad');
     // Mantenimientos
         // ASIGANTURA
-         Route::resource('/mantenimiento/Asignatura', AsignaturaController::class)->names('mantenimiento.asignatura');
+         Route::resource('/Mantenimiento/Asignatura', AsignaturaController::class)->names('mantenimiento.asignatura');
  }); 

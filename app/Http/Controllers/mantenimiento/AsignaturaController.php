@@ -17,7 +17,8 @@ class AsignaturaController extends Controller
     public function index()
     {
         //lee todos los registros
-        return view('mantenimiento.asignatura.index');
+        $Asignatura = Asignatura::all();
+        return view('mantenimiento.index')->with('Asignatura',$Asignatura);;
     }
 
     /**
@@ -50,7 +51,7 @@ class AsignaturaController extends Controller
     public function show(Asignatura $asignatura)
     {
         // muestra un registro en específico.
-        return view('mantenimiento.asignatura.show');
+        return view('mantenimiento.show');
     }
 
     /**
@@ -62,7 +63,7 @@ class AsignaturaController extends Controller
     public function edit(Asignatura $asignatura)
     {
         // para abrir un formulario para edición de un registro
-        return view('mantenimiento.asignatura.edit');
+        return view('mantenimiento.edit');
     }
 
     /**
